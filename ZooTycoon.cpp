@@ -32,3 +32,21 @@ private:
     int age;
     std::string name;
 };
+
+class CPenguin : public CAnimal {
+public:
+    CPenguin(int age, std::string name) : CAnimal(age, name) {}
+
+    std::string GetSpeciesName() const override {
+        return "Penguin";
+    }
+};
+
+class CPanda : public CAnimal {
+public:
+    CPanda(int age, std::string name) : CAnimal(age, name) {}
+
+    std::string GetSpeciesName() const override {
+        return "Panda";
+    }
+};
