@@ -1,29 +1,59 @@
 #include <iostream>
 #include <memory>
-#include "CAnimal.h"
-#include "CEnclosure.h"
 #include "CPanda.h"
-#include "CPenguin.h" // Include CPenguin header
+#include "CPenguin.h"
+#include "CEnclosure.h"
 
 int main() {
-    // Create some animals
-    std::shared_ptr<CAnimal> panda1 = std::make_shared<CPanda>(5, "Panda 1");
-    std::shared_ptr<CAnimal> panda2 = std::make_shared<CPanda>(3, "Panda 2");
-    std::shared_ptr<CAnimal> penguin1 = std::make_shared<CPenguin>(2, "Penguin 1"); // Create a Penguin
+    // Create animal objects
+    std::shared_ptr<CPanda> panda1 = std::make_shared<CPanda>(5, "Panda1");
+    std::shared_ptr<CPanda> panda2 = std::make_shared<CPanda>(4, "Panda2");
+    std::shared_ptr<CPenguin> penguin1 = std::make_shared<CPenguin>(3, "Penguin1");
+    std::shared_ptr<CPenguin> penguin2 = std::make_shared<CPenguin>(2, "Penguin2");
 
-    // Create an enclosure
-    CEnclosure enclosure;
+    // Create enclosures
+    CEnclosure pandaEnclosure;
+    CEnclosure penguinEnclosure;
+    CEnclosure mixedEnclosure;
 
-    // Add animals to the enclosure
-    enclosure.AddAnimal(panda1);
-    enclosure.AddAnimal(panda2);
-    enclosure.AddAnimal(penguin1); // Add a Penguin to the enclosure
+    // Add animals to enclosures
+    pandaEnclosure.AddAnimal(panda1);
+    pandaEnclosure.AddAnimal(panda2);
 
-    // Print the contents of the enclosure
-    enclosure.Print();
+    penguinEnclosure.AddAnimal(penguin1);
+    penguinEnclosure.AddAnimal(penguin2);
 
-    // The animals will be automatically destroyed when they go out of scope
-    // and their destructors will be called, demonstrating polymorphic behavior
+    mixedEnclosure.AddAnimal(panda1);
+    mixedEnclosure.AddAnimal(penguin2);
+
+    int choice;
+    bool continueRunning = true;
+
+    while (continueRunning) {
+        std::cout << "Choose an enclosure to view (1 for Pandas, 2 for Penguins, 3 for Mixed, 0 to quit): ";
+        std::cin >> choice;
+
+        switch (choice) {
+        case 0:
+            continueRunning = false;
+            break;
+        case 1:
+            std::cout << "Panda Enclosure:" << std::endl;
+            pandaEnclosure.Print();
+            break;
+        case 2:
+            std::cout << "Penguin Enclosure:" << std::endl;
+            penguinEnclosure.Print();
+            break;
+        case 3:
+            std::cout << "Mixed Enclosure:" << std::endl;
+            mixedEnclosure.Print();
+            break;
+        default:
+            std::cout << "Invalid choice. Please try again." << std::endl;
+            break;
+        }
+    }
 
     return 0;
 }

@@ -2,7 +2,7 @@
 
 #include <vector>
 #include <memory>
-#include "CAnimal.h" // Include the header for CAnimal
+#include "CAnimal.h"
 
 class CEnclosure {
 public:
