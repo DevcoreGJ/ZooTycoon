@@ -1,4 +1,6 @@
 #include <string>
+#include <vector>
+#include <memory>
 #include <iostream>
 
 class CAnimal {
@@ -49,4 +51,29 @@ public:
     std::string GetSpeciesName() const override {
         return "Panda";
     }
+};
+
+class CEnclosure {
+public:
+    // A public function to add an animal to the enclosure.
+    void AddAnimal(std::shared_ptr<CAnimal> animal) {
+        inhabitants.push_back(animal);
+    }
+
+    // A public function to print information about the animals in the enclosure.
+    void Print() {
+        std::cout << "Animals in the enclosure:" << std::endl;
+        for (size_t i = 0; i < inhabitants.size(); i++) {
+            std::shared_ptr<CAnimal> animal = inhabitants[i];
+            std::string name = animal->GetName();
+            std::string species = animal->GetSpeciesName();
+            std::cout << "Animal " << (i + 1) << ":" << std::endl;
+            std::cout << "Name: " << name << std::endl;
+            std::cout << "Species: " << species << std::endl;
+        }
+    }
+
+private:
+    // A private data member to store animals using shared pointers.
+    std::vector<std::shared_ptr<CAnimal>> inhabitants;
 };
