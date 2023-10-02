@@ -77,3 +77,16 @@ private:
     // A private data member to store animals using shared pointers.
     std::vector<std::shared_ptr<CAnimal>> inhabitants;
 };
+
+int main() {
+    std::shared_ptr<CAnimal> penguin = std::shared_ptr<CAnimal>(new CPenguin(5, "Pingu"));
+    std::shared_ptr<CAnimal> panda = std::shared_ptr<CAnimal>(new CPanda(3, "Po"));
+
+    CEnclosure enclosure;
+    enclosure.AddAnimal(penguin);
+    enclosure.AddAnimal(panda);
+
+    enclosure.Print();
+
+    return 0;
+}

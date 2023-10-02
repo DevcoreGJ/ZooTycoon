@@ -1,0 +1,3 @@
+﻿  ZooTycoon.cpp
+ZooTycoon.obj : error LNK2019: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl CAnimal::GetSpeciesName(void)const " (?GetSpeciesName@CAnimal@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) referenced in function "public: virtual __cdecl CAnimal::~CAnimal(void)" (??1CAnimal@@UEAA@XZ)
+C:\Users\Quies\source\repos\ZooTycoon\x64\Debug\ZooTycoon.exe : fatal error LNK1120: 1 unresolved externals
