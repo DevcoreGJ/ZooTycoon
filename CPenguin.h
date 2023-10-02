@@ -5,6 +5,6 @@
 
 class CPenguin : public CAnimal {
 public:
-    CPenguin(int age, std::string name);
+    CPenguin(int age, const std::string& name);
     std::string GetSpeciesName() const override;
 };

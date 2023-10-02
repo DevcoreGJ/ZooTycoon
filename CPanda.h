@@ -5,6 +5,6 @@
 
 class CPanda : public CAnimal {
 public:
-    CPanda(int age, std::string name);
+    CPanda(int age, const std::string& name);
     std::string GetSpeciesName() const override;
 };

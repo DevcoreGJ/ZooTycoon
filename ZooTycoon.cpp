@@ -5,18 +5,15 @@
 #include "CEnclosure.h"
 
 int main() {
-    // Create animal objects
     std::shared_ptr<CPanda> panda1 = std::make_shared<CPanda>(5, "Panda1");
     std::shared_ptr<CPanda> panda2 = std::make_shared<CPanda>(4, "Panda2");
     std::shared_ptr<CPenguin> penguin1 = std::make_shared<CPenguin>(3, "Penguin1");
     std::shared_ptr<CPenguin> penguin2 = std::make_shared<CPenguin>(2, "Penguin2");
 
-    // Create enclosures
     CEnclosure pandaEnclosure;
     CEnclosure penguinEnclosure;
     CEnclosure mixedEnclosure;
 
-    // Add animals to enclosures
     pandaEnclosure.AddAnimal(panda1);
     pandaEnclosure.AddAnimal(panda2);
 

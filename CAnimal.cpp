@@ -1,17 +1,16 @@
+// CAnimal.cpp
 #include "CAnimal.h"
+#include <string> // Add this line to include the <string> header
 
-CAnimal::CAnimal(int age, std::string name) : age(age), name(name) {}
+CAnimal::CAnimal(int age, const std::string& name)
+    : m_age(age), m_name(name) {}
 
 CAnimal::~CAnimal() {}
 
 std::string CAnimal::GetSpeciesName() const {
-    return "Unknown";
+    return "Unknown Species";
 }
 
 int CAnimal::GetAge() const {
-    return age;
-}
-
-std::string CAnimal::GetName() const {
-    return name;
+    return m_age;
 }
