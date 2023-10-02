@@ -18,5 +18,31 @@
     <ClCompile Include="ZooTycoon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CAnimal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPenguin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPanda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnclosure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CAnimal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPenguin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPanda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnclosure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

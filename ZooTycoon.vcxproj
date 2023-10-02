@@ -127,7 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CAnimal.cpp" />
+    <ClCompile Include="CEnclosure.cpp" />
+    <ClCompile Include="CPanda.cpp" />
+    <ClCompile Include="CPenguin.cpp" />
     <ClCompile Include="ZooTycoon.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CAnimal.h" />
+    <ClInclude Include="CEnclosure.h" />
+    <ClInclude Include="CPanda.h" />
+    <ClInclude Include="CPenguin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
